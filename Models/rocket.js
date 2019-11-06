@@ -1,8 +1,11 @@
 "use strict";
 var Rocket = /** @class */ (function () {
-    function Rocket(id, engine) {
+    function Rocket(id) {
+        this.engines = new Array();
         this.id = id;
-        this.engine = engine;
     }
+    Rocket.prototype.addEngine = function (engine) {
+        this.engines.push(engine);
+    };
     return Rocket;
 }());

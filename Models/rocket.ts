@@ -1,26 +1,12 @@
 class Rocket {
     id: string;
-    engine: number;
+    engines: Engine[] = new Array();
 
-    constructor(id: string, engine: number){
-        this.id = id;        
-        this.engine = engine;
+    constructor(id: string){
+        this.id = id;                
     }
 
-    // get rocketId() {
-    //     return this.id;
-    // }
-
-    // set rocketId(value) {
-    //     this.id = value;        
-    // }
-    
-    // get rocketEngine() {
-    //     return this.engine;
-    // }
-
-    // set rocketEngine(value) {
-    //     this.engine = value;
-    // }
-
+    addEngine (engine:Engine){
+        this.engines.push(engine);
+    }
 }
